@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Morse code demo</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<style>
+			body { padding-top: 50px; }
+			.starter-template {
+				padding: 40px 15px;
+			}
+			.input-group {
+				padding: 5px;
+			}
+			body {
+				font-family: !important;
+			}
+			.morsecode {
+				font-size: 22px !important;
+			}
+		</style>
+
+
+	</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+		<div class="nvarbar-header">
+		<a class="navbar-brand">Morse code demo</a>
+		</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="starter-template">
+		<p>This page demonstrates the sound of morse code. You can enter normal text below.
+		The JavaScript code on this page will convert it to morse code and sound!</p>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<input type="text" class="form-control input_morse" placeholder="Enter text">
+						<span class="input-group-btn">
+						<button class="btn btn-default play" type="button">Play!</button>
+						</span>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="input-group">
+						<input type="text" class="form-control morsecode" readonly>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="morse.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+
