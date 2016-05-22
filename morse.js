@@ -43,10 +43,10 @@ jQuery(document).ready(function() {
 
 	function play_morse() {
 	  if (audioCtx === undefined) {
-      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      audioCtx = new AudioContext();
     } else {
       audioCtx.close();
-      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      audioCtx = new AudioContext();
     }
 
 		oscillator = audioCtx.createOscillator();
