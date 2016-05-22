@@ -46,13 +46,13 @@ jQuery(document).ready(function() {
 		oscillator.frequency.value = 750; // value in hertz
 
 		var gainNode = audioCtx.createGain();
-		gainNode.gain.value = 0
+		gainNode.gain.value = 0;
 		oscillator.connect(gainNode);
 		gainNode.connect(audioCtx.destination);
 
 		oscillator.start(0);
 
-		var data = $('.input_morse').val().toUpperCase()
+		var data = $('.input_morse').val().toUpperCase();
 		var text = $('.morsecode');
 
 		text.val('');
