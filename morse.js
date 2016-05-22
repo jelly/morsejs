@@ -39,8 +39,16 @@ MORSE = {
 };
 
 jQuery(document).ready(function() {
+  var audioCtx;
+
 	function play_morse() {
-		var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+	  if (audioCtx === undefined) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    } else {
+      audioCtx.close();
+      audioCtx = undefined;
+      play_morse();
+    }
 
 		oscillator = audioCtx.createOscillator();
 		oscillator.frequency.value = 750; // value in hertz
