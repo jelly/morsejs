@@ -46,8 +46,7 @@ jQuery(document).ready(function() {
       audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     } else {
       audioCtx.close();
-      audioCtx = undefined;
-      play_morse();
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     }
 
 		oscillator = audioCtx.createOscillator();
